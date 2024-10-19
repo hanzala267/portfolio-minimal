@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
@@ -41,6 +40,7 @@ export default function Page() {
           </div>
         </div>
       </section>
+
       <section id="about">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
@@ -51,18 +51,15 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
+
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
           </BlurFade>
           {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
+            <BlurFade key={id} delay={BLUR_FADE_DELAY * 6 + id * 0.05}>
               <ResumeCard
-                key={work.company}
                 logoUrl={work.logoUrl}
                 altText={work.company}
                 title={work.company}
@@ -76,18 +73,15 @@ export default function Page() {
           ))}
         </div>
       </section>
+
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
             <h2 className="text-xl font-bold">Education</h2>
           </BlurFade>
           {DATA.education.map((education, id) => (
-            <BlurFade
-              key={education.school}
-              delay={BLUR_FADE_DELAY * 8 + id * 0.05}
-            >
+            <BlurFade key={id} delay={BLUR_FADE_DELAY * 8 + id * 0.05}>
               <ResumeCard
-                key={education.school}
                 href={education.href}
                 logoUrl={education.logoUrl}
                 altText={education.school}
@@ -99,6 +93,7 @@ export default function Page() {
           ))}
         </div>
       </section>
+
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -106,13 +101,14 @@ export default function Page() {
           </BlurFade>
           <div className="flex flex-wrap gap-1">
             {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
+                <Badge>{skill}</Badge>
               </BlurFade>
             ))}
           </div>
         </div>
       </section>
+
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
@@ -124,23 +120,17 @@ export default function Page() {
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Check out my latest work
                 </h2>
-                <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  I&apos;ve worked on a variety of projects, from simple
-                  websites to complex web applications. Here are a few of my
-                  favorites.
+                <p className="text-muted-foreground md:text-xl lg:text-base xl:text-xl">
+                  I&apos;ve worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
                 </p>
               </div>
             </div>
           </BlurFade>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[800px] mx-auto">
             {DATA.projects.map((project, id) => (
-              <BlurFade
-                key={project.title}
-                delay={BLUR_FADE_DELAY * 12 + id * 0.05}
-              >
+              <BlurFade key={id} delay={BLUR_FADE_DELAY * 12 + id * 0.05}>
                 <ProjectCard
                   href={project.href}
-                  key={project.title}
                   title={project.title}
                   description={project.description}
                   dates={project.dates}
@@ -154,33 +144,33 @@ export default function Page() {
           </div>
         </div>
       </section>
-      
-    <section id="contact" className="bg-background pb-16 px-2">
-      <div className="container mx-auto px-4">
-        <div className="text-center space-y-6">
-          <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm font-medium">
-            Contact
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-            Get in Touch
-          </h2>
-          <p className="mx-auto max-w-[600px] text-muted-foreground text-lg">
-            Want to chat? You can reach me via email or WhatsApp. I'll respond whenever I can. Please note that I will ignore all soliciting.
-          </p>
-          <div className="flex justify-center space-x-4">
-            <Button variant="outline" size="lg" onClick={() => window.location.href = 'mailto:mhanzala267@gmail.com'}>
-              <Mail className="mr-2 h-4 w-4" />
-              Email Me
-            </Button>
-            <Button variant="outline" size="lg" onClick={() => window.location.href = 'https://wa.me/923321662688'}>
-              <Phone className="mr-2 h-4 w-4" />
-              WhatsApp
-            </Button>
+
+      <section id="contact" className="bg-background pb-16 px-2">
+        <div className="container mx-auto px-4">
+          <div className="text-center space-y-6">
+            <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm font-medium">
+              Contact
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              Get in Touch
+            </h2>
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+  I&apos;ve worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
+</p>
+
+            <div className="flex justify-center space-x-4">
+              <Button variant="outline" size="lg" onClick={() => window.location.href = 'mailto:mhanzala267@gmail.com'}>
+                <Mail className="mr-2 h-4 w-4" />
+                Email Me
+              </Button>
+              <Button variant="outline" size="lg" onClick={() => window.location.href = 'https://wa.me/923321662688'}>
+                <Phone className="mr-2 h-4 w-4" />
+                WhatsApp
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-
+      </section>
     </main>
   );
 }
