@@ -99,7 +99,7 @@ export function ProjectCard({
           {description.length > characterLimit && (
             <button
               onClick={toggleDescription}
-              className="text-xs text-gray-800 underline mt-1"
+              className="text-xs text-gray-800 dark:text-gray-100 underline mt-1"
             >
               {showFullDescription ? "Read Less" : "Read More"}
             </button>
