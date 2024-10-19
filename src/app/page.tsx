@@ -154,9 +154,7 @@ export default function Page() {
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               Get in Touch
             </h2>
-            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-  I&apos;ve worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.
-</p>
+            
 
             <div className="flex justify-center space-x-4">
               <Button variant="outline" size="lg" onClick={() => window.location.href = 'mailto:mhanzala267@gmail.com'}>
